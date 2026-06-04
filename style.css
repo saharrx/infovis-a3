@@ -21,9 +21,51 @@ section {
     box-shadow: 0 2px 8px rgba(31, 41, 51, 0.1);
 }
 
+.attribute-controls-section {
+    overflow-x: visible;
+}
+
+#attribute-controls {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 0.5rem;
+}
+
+.attribute-option {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    padding: 0.45rem 0.6rem;
+    border: 1px solid #d9e2ec;
+    border-radius: 0.35rem;
+    cursor: pointer;
+}
+
+.attribute-option:has(input:checked) {
+    border-color: #377eb8;
+    background: #eaf4fb;
+}
+
+.attribute-option:has(input:disabled) {
+    cursor: not-allowed;
+    opacity: 0.65;
+}
+
+#attribute-selection-status {
+    margin: 1rem 0 0;
+    color: #52606d;
+    font-weight: bold;
+}
+
 #parallel-coordinates svg {
     display: block;
     min-width: 1000px;
+}
+
+#scatterplot-matrix svg {
+    display: block;
+    min-width: 900px;
+    max-width: 100%;
 }
 
 .player-line {
@@ -62,5 +104,53 @@ section {
 .axis-brush .selection {
     fill: #e6550d;
     fill-opacity: 0.2;
+    stroke: #e6550d;
+}
+
+.cell-frame {
+    fill: #ffffff;
+    stroke: #cbd2d9;
+}
+
+.diagonal-cell .cell-frame {
+    fill: #edf2f7;
+}
+
+.player-point {
+    fill: #377eb8;
+    fill-opacity: 0.45;
+}
+
+.player-point:hover {
+    fill: #e6550d;
+    fill-opacity: 1;
+    stroke: #ffffff;
+    stroke-width: 1;
+}
+
+.player-point.selected {
+    fill: #e6550d;
+    fill-opacity: 1;
+}
+
+.player-point.unselected {
+    fill-opacity: 0.06;
+}
+
+.splom-x-axis,
+.splom-y-axis {
+    color: #7b8794;
+    font-size: 9px;
+}
+
+.diagonal-label {
+    fill: #1f2933;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.splom-brush .selection {
+    fill: #e6550d;
+    fill-opacity: 0.15;
     stroke: #e6550d;
 }
