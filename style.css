@@ -1,5 +1,66 @@
 body {
-    height: 100%;
+    margin: 0;
+    padding: 2rem;
+    background: #f5f7fa;
+    color: #1f2933;
+    font-family: Arial, sans-serif;
 }
 
-/* YOUR CSS CODE GOES HERE */
+header,
+main {
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+section {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    overflow-x: auto;
+    background: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 8px rgba(31, 41, 51, 0.1);
+}
+
+#parallel-coordinates svg {
+    display: block;
+    min-width: 1000px;
+}
+
+.player-line {
+    fill: none;
+    stroke: #377eb8;
+    stroke-width: 1.2;
+    stroke-opacity: 0.25;
+}
+
+.player-line:hover {
+    stroke: #e6550d;
+    stroke-width: 2.5;
+    stroke-opacity: 1;
+}
+
+.player-line.selected {
+    stroke: #e6550d;
+    stroke-width: 2;
+    stroke-opacity: 1;
+}
+
+.player-line.unselected {
+    stroke-opacity: 0.04;
+}
+
+.parallel-axis {
+    color: #52606d;
+}
+
+.axis-label {
+    fill: #1f2933;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.axis-brush .selection {
+    fill: #e6550d;
+    fill-opacity: 0.2;
+    stroke: #e6550d;
+}
